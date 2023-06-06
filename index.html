@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="d-flex justify-content-center align-item-center">
+    
+    <section class="my-box">
+        <img src="images/logo-vrim.png" class="vrim"> 
+        <div class="box-header">
+            <div class="row">
+                <div class="col-6 box-h-l">
+                    <div class="d-flex justify-content-start align-item-start align-content-center h-100">
+                        <img src="images/logo-vrim.png"> 
+                    </div>
+                </div>
+                <div class="col-6 box-h-r">
+                    <div class="d-flex justify-content-end align-item-center align-content-center h-100">
+                        <div class="d-flex flex-column justify-content-center pe-4">
+                            <p class="mt-auto mb-auto">Pago realizado vía</p>
+                        </div>
+                        <img src="images/paynet_logo.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-main pt-3">
+            <div class="row">
+                <div class="col-6 box-m-l pt-4 pb-4">
+                    <div>
+                        <h3>Fecha límite de pago</h3>
+                    </div>
+                    <div class="box-data-code pt-1">
+                        <p>{date}, a las {hours}</p>
+                    </div>
+                    <div class="box-m-code pt-2 pb-2">
+                        <div>{barcode_url}</div>
+                        <div class="d-flex justify-content-center pt-2 box-num-code">
+                            <p>{reference}</p>
+                        </div>
+                    </div>
+                    <div class="box-m-help mb-0">
+                        <p>En caso de que el escáner no sea capaz de leer el código de barras, escribir la referencia tal como se muestra.</p>
+                    </div>
+                </div>
+                <div class="col-6 box-m-r p-0 ps-3">
+                    <div class="box-pricing d-flex flex-column justify-content-center h-100">
+                        <div class="title-pricing text-center">
+                            <p>Total a pagar</p>
+                        </div>
+                        <div class="num-total text-center">
+                            <p>{amount}<span id="moneda">MXN</span></p>
+                        </div>
+                        <div class="box-m-help text-center mb-0">
+                            <p>La comisión por recepción del pago varía de acuerdo a los términos y condiciones que cada cadena comercial establece.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-detalle pt-2">
+            <div>
+                <h3>Detalles de la compra</h3>
+            </div>
+            <div class="pt-3">
+                <table class="table">
+                    <thead>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Descripción</th>
+                        <td>{description}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Fecha y hora</th>
+                        <td>{date} a las {hours}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Correo del cliente</th>
+                        <td>{client_email}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+
+        <div class="box-instruciones pt-2">
+            <div class="row">
+                <div class="col-6">
+                    <div class="pb-4">
+                        <h4>Como realizar el pago</h4>
+                    </div>
+                    <div>
+                        <ol>
+                            <li>
+                                <p class="mb-1 ps-2">Acude a cualquier tienda afiliada</p>
+                            </li>
+                            <li>
+                                <p class="mb-1 ps-2">Entrega al cajero el código de barras y menciona que realizarás un pago de servicio Paynet</p>
+                            </li>
+                            <li>
+                                <p class="mb-1 ps-2">Realizar el pago en efectivo por $9,000.00 MXN</p>
+                            </li>
+                            <li>
+                                <p class="mb-1 ps-2">Conserva el ticket para cualquier aclaración</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="box-m-help mb-0 pt-1">
+                        <p>Si tienes dudas comunícate al teléfono 5542093200 o al correo contactame@salud-interactiva.com.mx</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="pb-4">
+                        <h4>Instrucciones para el cajero</h4>
+                    </div>
+                    <div>
+                        <ol>
+                            <li>
+                                <p class="mb-1 ps-2">Ingresar al menú de Pago de Servicios</p>
+                            </li>
+                            <li>
+                                <p class="mb-1 ps-2">Seleccionar Paynet</p>
+                            </li>
+                            <li>
+                                <p class="mb-1 ps-2">Escanear el código de barras o ingresar el núm. de referencia</p>
+                            </li>
+                            <li>
+                                <p class="mb-1 ps-2">Ingresa la cantidad total a pagar</p>
+                            </li>
+                            <li>
+                                <p class="mb-1 ps-2">Cobrar al cliente el monto total más la comisión</p>
+                            </li>
+                            <li>
+                                <p class="mb-1 ps-2">Confirmar la transacción y entregar el ticket al cliente</p>
+                            </li>
+                        </ol>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="box-marcas">
+            <div class="row">
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="images/01.png" class="img-fluid"> 
+                        </div>
+                        <div class="col-3">
+                            <img src="images/02.png" class="img-fluid"> 
+                        </div>
+                        <div class="col-3">
+                            <img src="images/03.png" class="img-fluid"> 
+                        </div>
+                        <div class="col-3">
+                            <img src="images/04.png" class="img-fluid"> 
+                        </div>
+                        <div class="col-3">
+                            <img src="images/05.png" class="img-fluid"> 
+                        </div>
+                        <div class="col-3">
+                            <img src="images/06.png" class="img-fluid"> 
+                        </div>
+                        <div class="col-3">
+                            <img src="images/07.png" class="img-fluid"> 
+                        </div>
+                        <div class="col-3">
+                            <img src="images/08.png" class="img-fluid"> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 box-r-marcas ps-4">
+                    <div class="d-flex flex-column justify-content-center pe-4 h-100">
+                        <p class="mt-auto mb-auto">¿Quieres pagar en otras tiendas? visítanos en: <a href="#"><strong>www.openpay.mx/tiendas</strong></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-footer pt-4">
+            <div class="row">
+                <div class="col-6">
+                    <div class="d-flex align-items-center h-100">
+                        <img src="images/powered_openpay.png" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
